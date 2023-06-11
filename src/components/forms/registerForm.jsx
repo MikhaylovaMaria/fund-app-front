@@ -54,7 +54,7 @@ const RegisterForm = () => {
                               !value ||
                               (value && SUPPORTED_FORMATS.includes(value?.type))
                       )
-                : Yup.string().url("").nullable()
+                : Yup.string()
     });
 
     const initialValues = {

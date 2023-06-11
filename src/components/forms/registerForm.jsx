@@ -54,7 +54,7 @@ const RegisterForm = () => {
                               !value ||
                               (value && SUPPORTED_FORMATS.includes(value?.type))
                       )
-                : Yup.string().url("Неверный формат").nullable()
+                : Yup.string().url("").nullable()
     });
 
     const initialValues = {

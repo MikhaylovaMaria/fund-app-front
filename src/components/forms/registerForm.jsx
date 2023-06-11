@@ -43,7 +43,7 @@ const RegisterForm = () => {
                       .nullable()
                       .test(
                           "FILE_SIZE",
-                          "Размер файла слмшком большой",
+                          "Размер файла слишком большой",
                           (value) =>
                               !value || (value && value.size <= 1024 * 1024)
                       )

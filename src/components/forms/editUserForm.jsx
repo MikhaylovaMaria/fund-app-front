@@ -27,7 +27,7 @@ const UserFormEdit = ({ setActive, user }) => {
                       .nullable()
                       .test(
                           "FILE_SIZE",
-                          "Размер файла слмшком большой",
+                          "Размер файла слишком большой",
                           (value) =>
                               !value || (value && value.size <= 1024 * 1024)
                       )
@@ -38,7 +38,7 @@ const UserFormEdit = ({ setActive, user }) => {
                               !value ||
                               (value && SUPPORTED_FORMATS.includes(value?.type))
                       )
-                : Yup.string().url("Неверный формат").nullable()
+                : Yup.string()
     });
 
     const initialValues = {

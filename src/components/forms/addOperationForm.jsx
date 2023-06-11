@@ -17,7 +17,7 @@ const OperationFormAdd = ({ setActive, type }) => {
     const validationSchema = Yup.object().shape({
         summa: Yup.number("Введите число")
             .required("Поле обязательно к заполнению")
-            .min(0, "Сумма должна быть положительным числом"),
+            .min(1, "Сумма должна быть положительным числом"),
         type: Yup.string().required("Поле обязательно к заполнению"),
         account: Yup.string().required("Поле обязательно к заполнению"),
         category: Yup.string().required("Поле обязательно к заполнению"),
